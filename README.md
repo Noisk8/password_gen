@@ -28,7 +28,6 @@ let password_length: i32 = 15;: Declara e inicializa una variable password_lengt
 let mut resultado: String = String::new();: Declara una variable mutable llamada resultado, que es de tipo String y se inicializa como una cadena vacía (String::new()). Esta variable almacenará la contraseña generada.
 
 ~~~
-Copy code
     for _ in 0..password_length {
         let number: u32 = thread_rng().gen_range(48..122);
         let ch: char = from_u32(number).unwrap();
@@ -46,7 +45,6 @@ let ch: char = from_u32(number).unwrap();: Convierte el número aleatorio genera
 resultado.push(ch);: Añade el carácter generado a la variable resultado, que almacenará la contraseña.
 
 ~~~
-Copy code
     println!("{}", resultado);
 }
 
